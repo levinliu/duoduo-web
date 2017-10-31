@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      name: mongodb-dev
+      host: 127.0.0.1
+      port: 27017
+      login: duoduo_user
+      password: mongo654321db
+      adminDb: admin
+      database: duoduodb
+      poolOptions:
+        connectionsPerHost: 300
+        connectTimeout: 3000
+        maxWaitTime: 5000
+        socketTimeout: 0 #no limit
+        threadsAllowedToBlockForConnectionMultiplier: 5000 #set the thread pool number with proper number, it will throw 'Out of semaphores to get db' exception
+        writeConcern: SAFE
+server:
+  port: 7070
+
